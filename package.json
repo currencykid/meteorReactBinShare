@@ -1,0 +1,27 @@
+{
+  "name": "",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "classnames": "^2.2.3",
+    "history": "^2.1.0",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "react-mounter": "^1.2.0", 
+    "react-router": "^2.3.0"
+  }
+}
