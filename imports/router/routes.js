@@ -9,6 +9,7 @@ import MainLayout from '../ui/containers/MainLayout.jsx';
 import Header from '../ui/components/header/Header.jsx'; 
 import Register from '../ui/components/user/register.jsx'; 
 import Login from '../ui/components/user/login.jsx'; 
+import ChangePassword from '../ui/components/user/changePassword.jsx'; 
 
 
 FlowRouter.route('/', {
@@ -40,9 +41,26 @@ FlowRouter.route('/login', {
   }
 });
 
+FlowRouter.route('/changePassword', {
+  name: 'ChangePassword',
+  triggersEnter: [isNotLoggedIn], 
+  action() {
+    mount(MainLayout, {
+      children: <ChangePassword /> 
+    })
+  }
+});
+
 //check if user is logged in
 function isLoggedIn(context, doRedirect){
   if(User.isLoggedIn()){
     doRedirect('/'); 
   }
 }
+
+function isNotLoggedIn(context, doRedirect){
+  if(!User.isLoggedIn()){
+    doRedirect('/'); 
+  }
+}
+
